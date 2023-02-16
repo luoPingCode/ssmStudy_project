@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="htdb-db">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/lib/htdb-db.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/src/main/lib/htdb-db.jar!/" />
+    </SOURCES>
+  </library>
+</component>

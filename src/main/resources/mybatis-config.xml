@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+<!--    &lt;!&ndash; properties配置数据库 &ndash;&gt;-->
+<!--    <properties resource="db.properties"/>-->
+
+
+<!--    <settings>-->
+<!--        &lt;!&ndash; 开启二级缓存 &ndash;&gt;-->
+<!--        <setting name="cacheEnabled" value="true"/>-->
+<!--        &lt;!&ndash; 日志 &ndash;&gt;-->
+<!--        <setting name="logImpl" value="LOG4J"/>-->
+
+<!--        &lt;!&ndash; 延迟加载 &ndash;&gt;-->
+<!--        <setting name="lazyLoadingEnabled" value="true"/>-->
+<!--        &lt;!&ndash; 不要积极的查询关联对象 &ndash;&gt;-->
+<!--        <setting name="aggressiveLazyLoading" value="false"/>-->
+<!--        &lt;!&ndash; 打印对象避免发送额外的SQL语句 ,指定的方法就会发送额外的SQL语句&ndash;&gt;-->
+<!--        <setting name="lazyLoadTriggerMethods" value="equals"/>-->
+
+<!--    </settings>-->
+
+    <!--配置数据源，交给spring去做 别名 -->
+    <typeAliases>
+<!--        <typeAlias type="com.lp.pojo" alias="User"/>-->
+<!--        <typeAlias type="cn.mybaties.login.domain.User" alias="_User"/>-->
+<!--        <typeAlias type="com.mybaties.domain.Department" alias="Department"/>-->
+        <package name="com.lp.pojo"/>
+    </typeAliases>
+
+<!--    <environments default="development">-->
+<!--        <environment id="development">-->
+<!--            &lt;!&ndash; 事务管理器 &ndash;&gt;-->
+<!--            <transactionManager type="JDBC"></transactionManager>-->
+<!--            &lt;!&ndash; 数据源 &ndash;&gt;-->
+<!--            <dataSource type="POOLED">-->
+<!--                <property name="driver" value="${jdbc.driver}"/>-->
+<!--                <property name="url" value="${jdbc.url}"/>-->
+<!--                <property name="username" value="${jdbc.username}"/>-->
+<!--                <property name="password" value="${jdbc.password}"/>-->
+<!--            </dataSource>-->
+<!--        </environment>-->
+<!--    </environments>-->
+    <!-- 关联Mapper文件 -->
+    <mappers>
+        <mapper class="com.lp.dao.BookMapper"/>
+<!--        <mapper resource="com\mybaties\mapper\DepartmentMapper.xml"/>-->
+    </mappers>
+</configuration>
